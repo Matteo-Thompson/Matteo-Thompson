@@ -1,0 +1,296 @@
+/* Main app container */
+.App {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+/* Main content area */
+main {
+  width: 100%;
+  max-width: 800px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* App header styles */
+.App-header {
+  margin-bottom: 2rem;
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Leaderboard controls layout */
+.leaderboard-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+/* Individual player card styles */
+.player-card {
+  display: flex;
+  align-items: center;
+  background-color: #3a3f4b;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Rank information styles */
+.rank-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 1rem;
+  min-width: 30px;
+}
+
+.current-rank {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.rank-change {
+  font-size: 1rem;
+  margin-left: 4px;
+}
+
+.rank-change.up {
+  color: #4caf50;
+}
+
+.rank-change.down {
+  color: #f44336;
+}
+
+.rank-change.same {
+  color: #9e9e9e;
+}
+
+/* Player avatar styles */
+.player-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.player-info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.player-info h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  text-align: left;
+  width: 33%;
+}
+
+.player-info p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  text-align: left;
+  width: 33%;
+}
+
+select {
+  background-color: #3a3f4b;
+  color: white;
+  border: 1px solid #61dafb;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  background-color: #3a3f4b;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 300px;
+}
+
+.popup h2 {
+  margin-top: 0;
+}
+
+.popup form {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup label {
+  margin-bottom: 0.5rem;
+}
+
+.popup input {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.popup button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Tab button styles */
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.tab-button {
+  background-color: #3a3f4b;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.tab-button.active {
+  background-color: #61dafb;
+  color: #282c34;
+}
+
+/* Top 3 Leaderboard styles */
+.top-3-leaderboard {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 16px;
+  padding: 16px;
+}
+
+.leaderboard-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+}
+
+.leaderboard-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #d1d5db;
+  margin-bottom: 8px;
+}
+
+.leaderboard-item-content {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.39);
+  text-align: center;
+}
+
+.leaderboard-rank {
+  font-weight: bold;
+  color: #fff;
+  margin: 0;
+}
+
+.leaderboard-stats {
+  font-size: 14px;
+  color: #fff;
+  margin: 0;
+}
+
+.leaderboard-name {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Specific styles for each rank */
+.leaderboard-item.rank-1 {
+  order: 2;
+}
+
+.leaderboard-item.rank-1 .leaderboard-item-content {
+  height: 192px;
+  background-color: rgba(254, 243, 199, 0.39);
+}
+
+.leaderboard-item.rank-2 {
+  order: 1;
+}
+
+.leaderboard-item.rank-2 .leaderboard-item-content {
+  height: 160px;
+  background-color: rgba(243, 244, 246, 0.39);
+}
+
+.leaderboard-item.rank-3 {
+  order: 3;
+}
+
+.leaderboard-item.rank-3 .leaderboard-item-content {
+  height: 144px;
+  background-color: rgba(254, 215, 170, 0.39);
+}
+
+/* Remove specific rank styles as they're no longer needed */
+.leaderboard-item.rank-1,
+.leaderboard-item.rank-2,
+.leaderboard-item.rank-3 {
+  order: unset;
+}
+
+/* ... rest of the existing styles ... */
